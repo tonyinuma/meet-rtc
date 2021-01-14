@@ -23,5 +23,9 @@
         "resolve-url-loader": "^3.1.0",
         "sass": "^1.15.2",
         "sass-loader": "^8.0.0"
+    },
+    "dependencies": {
+        "pusher-js": "^7.0.2",
+        "simple-peer": "^9.9.3"
     }
 }
