@@ -15,11 +15,11 @@ function App() {
             then((stream) => {
                 setHasMedia(true);
                 try {
-                    myVideo.srcObject = stream;
+                    myVideo.current.srcObject = stream;
                 } catch (e) {
                     myVideo.src = URL.createObjectURL(stream);
                 }
-                myVideo.play();
+                myVideo.current.play();
         })
 
     }, []);

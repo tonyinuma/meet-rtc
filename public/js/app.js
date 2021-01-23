@@ -65806,7 +65806,7 @@ var MediaHandler = /*#__PURE__*/function () {
     value: function getPermissions() {
       return new Promise(function (res, rej) {
         navigator.mediaDevices.getUserMedia({
-          video: false,
+          video: true,
           audio: true
         }).then(function (stream) {
           res(stream);
@@ -65942,12 +65942,12 @@ function App() {
       setHasMedia(true);
 
       try {
-        myVideo.srcObject = stream;
+        myVideo.current.srcObject = stream;
       } catch (e) {
         myVideo.src = URL.createObjectURL(stream);
       }
 
-      myVideo.play();
+      myVideo.current.play();
     });
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
